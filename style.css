@@ -1,0 +1,210 @@
+:root {
+    --bg-main: #060814;
+    --bg-card: #0e132b;
+    --text-light: #f1f5f9;
+    --text-muted: #94a3b8;
+    --accent: #10b981; /* Неоново-зеленый оттенок */
+    --accent-hover: #059669;
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--bg-main);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Хедер */
+.main-header {
+    background-color: rgba(6, 8, 20, 0.9);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 1px solid #1e293b;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--text-light);
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent);
+}
+
+/* Hero Секція */
+.hero-section {
+    height: 85vh;
+    min-height: 550px;
+    background: radial-gradient(circle at top right, rgba(16, 185, 129, 0.08), transparent 45%),
+                radial-gradient(circle at bottom left, rgba(14, 19, 43, 0.5), transparent 50%);
+    display: flex;
+    align-items: center;
+    padding-top: 75px;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #000;
+    padding: 14px 36px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    background-color: var(--accent-hover);
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Секція послуг */
+.services-section {
+    padding: 120px 0;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: var(--accent);
+    margin-top: 12px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+.service-card {
+    background-color: var(--bg-card);
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 40px 32px;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.service-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.service-desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Футер */
+.main-footer {
+    background-color: #03040a;
+    padding: 40px 0;
+    border-top: 1px solid #121829;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.footer-content p {
+    margin: 6px 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.4rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
