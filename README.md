@@ -13,4 +13,4 @@
 * **Чуйність**: Повна адаптивність під мобільні пристрої та планшети.
 
 ### Демонстрація (GitHub Pages)
-[Подивитися живий сайт](https://black1wire.github.io/black1wireCyberSphere/)
+[Подивитися живий сайт](https://black1wire.github.io/black1wire/CyberSphere/)
